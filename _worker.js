@@ -200,30 +200,9 @@ function configHTML(域名, token) {
 	return `
 	  <html>
 		<head>
-		  <title>CF-Workers-TEXT2KV</title>
+		  <title>CF-TEXT2KV</title>
 		</head>
-		<body>
-		  <h1 class="centered">CF-Workers-TEXT2KV 配置信息</h1>
-		  <p class="centered">
-		  服务域名: ${域名} <br>
-		  token: ${token} <br>
-		  <br>
-		  <pre>注意! 因URL长度内容所限，脚本更新方式一次最多更新65行内容</pre><br>
-		  Windows脚本: <button type="button" onclick="window.open('https://${域名}/config/update.bat?token=${token}', '_blank')">点击下载</button>
-		  <br>
-		  <pre>使用方法: <code>&lt;update.bat&nbsp;ip.txt&gt;</code></pre>
-		  <br>
-		  Linux脚本: 
-		  <code>&lt;curl&nbsp;https://${域名}/config/update.sh?token=${token}&nbsp;-o&nbsp;update.sh&nbsp;&&&nbsp;chmod&nbsp;+x&nbsp;update.sh&gt;</code><br>
-		  <pre>使用方法: <code>&lt;./update.sh&nbsp;ip.txt&gt;</code></pre><br>
-		  <br>
-		  在线文档查询: <br>
-		  https://${域名}/<input type="text" name="keyword" placeholder="请输入要查询的文档">?token=${token}    
-		  <button type="button" onclick="window.open('https://${域名}/' + document.querySelector('input[name=keyword]').value + '?token=${token}', '_blank')">查看文档内容</button>
-		  <button type="button" onclick="navigator.clipboard.writeText('https://${域名}/' + document.querySelector('input[name=keyword]').value + '?token=${token}')">复制文档地址</button>
-		  </p>
-	  <br>
-		</body>
+		
 	  </html>
 	`
 }
